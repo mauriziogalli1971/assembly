@@ -1,0 +1,30 @@
+// Units
+// ----------------------------------------------------------------------------
+$base-factor: 62.5%;
+$base-unit: 1rem;
+
+// Box-model
+$distance: 2 * $base-unit;
+$x-distance: $distance;
+$y-distance: 0.75 * $x-distance;
+
+// Typography
+// ----------------------------------------------------------------------------
+$font-family: "Hanken Grotesk", system-ui, Avenir, Helvetica, Arial, sans-serif;
+$font-size-base: 2 * $base-unit;
+
+// Colors
+// ----------------------------------------------------------------------------
+$background-color: #262626;
+$color: #D9D9D9;
+
+$status-color-bye: #7A5EA7;
+$status-color-win: #10A95B;
+$status-color-loss: #BA2A2A;
+$status-color: #F9F4DA;
+
+// Viewport
+$breakpoint-mobile: 400px;
+$breakpoint-tablet: 700px;
+
+

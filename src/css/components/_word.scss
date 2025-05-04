@@ -1,0 +1,44 @@
+@use "../variables";
+
+$bg-color: #323232;
+$letter-width: 2 * variables.$distance;
+.word {
+  margin-top: 2 * variables.$distance;
+  max-width: variables.$breakpoint-mobile;
+  width: 100%;
+
+  &--list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.1 * variables.$distance;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+  }
+
+  &--letter {
+    aspect-ratio: 1 / 1;
+    background: $bg-color;
+    display: block;
+    flex: 1;
+    font-size: 2.5 * variables.$base-unit;
+    line-height: $letter-width;
+    list-style: none;
+    max-width: $letter-width;
+    position: relative;
+    text-align: center;
+    text-transform: uppercase;
+    &__missed {
+      color: #EC5D49;
+    }
+
+    &::after {
+      border-bottom: 1px solid variables.$color;
+      content: "";
+      display: block;
+      position: absolute;
+      bottom: -1px;
+      width: 100%;
+    }
+  }
+}

@@ -1,0 +1,40 @@
+@use "../variables";
+
+.status {
+  align-items: center;
+  border-radius: variables.$base-unit;
+  color: variables.$status-color;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-top: variables.$distance;
+  max-width: variables.$breakpoint-mobile;
+  min-height: 5 * variables.$distance;
+  padding: variables.$y-distance variables.$x-distance;
+  text-align: center;
+  visibility: hidden;
+  width: 100%;
+
+  h1, h2, h3, h4, h5, h6 {
+    margin-bottom: 0;
+  }
+
+  p {
+    margin-top: 0;
+    line-height: 1.5 * variables.$font-size-base;
+  }
+
+  &__visible {
+    visibility: visible;
+  }
+
+  &__won {
+    background-color: variables.$status-color-win;
+  }
+  &__lost {
+    background-color: variables.$status-color-loss;
+  }
+  &__bye {
+    background-color: variables.$status-color-bye;
+  }
+}

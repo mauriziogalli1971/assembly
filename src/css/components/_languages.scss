@@ -1,0 +1,35 @@
+@use "../variables";
+
+.languages {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.25 * variables.$distance;
+  margin-top: 2 * variables.$distance;
+  max-width: variables.$breakpoint-mobile;
+
+  &--item {
+    list-style: none;
+    border-radius: 0.5 * variables.$base-unit;
+    font-size: 1.5 * variables.$base-unit;
+    font-weight: 700;
+    padding: 0.25 * variables.$distance 0.5 * variables.$distance;
+
+    &__wrong {
+      position: relative;
+      &::before {
+        content: "💀";
+        position: absolute;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100%;
+        width: 100%;
+        font-size: variables.$font-size-base;
+        top: 0;
+        left: 0;
+        background-color: rgba(0, 0, 0, 0.7);
+      }
+    }
+  }
+}

@@ -1,0 +1,79 @@
+@use "./variables";
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: variables.$base-factor;
+}
+
+body {
+  margin: 0;
+  font-family: variables.$font-family;
+  font-size: variables.$font-size-base;
+  background-color: variables.$background-color;
+  color: variables.$color;
+  padding: variables.$y-distance variables.$x-distance;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+}
+
+header {
+  max-width: variables.$breakpoint-mobile;
+  text-align: center;
+}
+
+.new-game {
+  all: unset;
+  background: #11B5E5;
+  border-radius: 0.5 * variables.$base-unit;
+  color: variables.$background-color;
+  cursor: pointer;
+  font-size: 2 * variables.$base-unit;
+  font-weight: 700;
+  line-height: 2 * variables.$distance;
+  outline: 2px solid variables.$color;
+  margin-top: 2 * variables.$distance;
+  max-width: 0.5 * variables.$breakpoint-mobile;
+  padding: 0 variables.$distance;
+  text-align: center;
+  white-space: nowrap;
+  width: 100%;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+.disabled {
+  cursor: not-allowed;
+  pointer-events: none;
+  opacity: 0.65;
+}
+
+.score {
+  display: flex;
+  align-items: baseline;
+  margin-top: variables.$y-distance;
+  > * {
+    padding: 0 variables.$distance;
+  }
+}
